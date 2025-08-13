@@ -4,7 +4,10 @@ export default function Custom() {
     return (
         <>
             <div className="card">
-                dark
+                Card text
+            </div>
+            <div className="flex-center">
+                flex-center
             </div>
         </>
 
