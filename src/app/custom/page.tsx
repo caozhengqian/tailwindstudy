@@ -4,11 +4,12 @@ export default function Custom() {
     return (
         <>
             <div className="card">
-                Card text
+                @layer components
             </div>
             <div className="flex-center">
-                flex-center
+                @utility flex-center
             </div>
+            <h1>@layer base</h1>
         </>
 
     );

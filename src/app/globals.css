@@ -28,6 +28,11 @@ body {
 @utility flex-center {
   @apply flex justify-center items-center text-green-500
 }
+@layer base {
+  h1{
+    @apply text-2xl text-blue-500 flex-center
+  }
+}
 @layer components{
   .card{
     @apply w-20 h-20 bg-yellow-500 flex-center
