@@ -1,4 +1,3 @@
-"use client"
 export default function Media() {
 
     return (
@@ -8,6 +7,9 @@ export default function Media() {
             </div>
             <div className="max-sm:bg-amber-500 max-md:bg-amber-700">
                 <p >max-sm(小于640px)max-md(小于768px)</p>
+            </div>
+            <div>
+                <p className="text-[min(10vw,120px)]">平滑过度</p>
             </div>
         </>
 
