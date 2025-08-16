@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# tailwindCss
+## mx margin左右  my margin上下
+## text-[30px],bg-[#122831],before:conent-['jsm]
+## sm (width >= 40rem /* 640px  )    max-sm(width < 40rem) 
+    自定义 max-[600px]:bg-sky-300   
+    平滑过度 text-[min(10vw,120px)]
+## 移动优先算法
+## 黑暗模式 bg-white dark:bg-black
+## 自定义@utility  base components
+```css
+@utility flex-center {
+  @apply flex justify-center items-center text-green-500
+}
+@layer base {
+  h1{
+    @apply text-2xl text-blue-500 flex-center
+  }
+}
+@layer components{
+  .card{
+    @apply w-20 h-20 bg-yellow-500 flex-center
+  }
+}
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 伪类，伪元素
+```html
+    <p className="selection:bg-green-500 selection:text-red-500">
+        这是一个段落，你可以选中任意内容，查看它们的背景颜色
+    </p>
+```
+## tailwind方法
+open：打开手风琴
+## tailwind交互
+caret-pink-500:input中的鼠标光标红色
