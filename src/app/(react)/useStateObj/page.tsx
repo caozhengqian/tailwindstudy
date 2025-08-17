@@ -28,7 +28,7 @@ export default function UseStateObj() {
             draft.name = e.target.value;
         });
     }
-
+    setIndex((prev)=>prev+1);
     function handleTitleChange(e) {
         // setPerson({
         //     ...person,
