@@ -2,13 +2,12 @@
 import { useState,useTransition } from 'react';
 
 // http://localhost:3000/useTransition1
-// useTransition降低更新的优先级
+// useTransition保证input交互。将包裹的内容进入后台渲染。
 export default function UseStateObj() {
     const [inputV,setInputV] = useState<string>("");
     const [changeV,setChangeV] = useState<string>("");
     const [isPending,startTransition] = useTransition()
     const inputEvent=(e)=>{
-
         startTransition(()=>{//降低优先级
             setInputV(e.target.value);
         })
