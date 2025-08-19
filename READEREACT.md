@@ -204,3 +204,16 @@ const value:string = '<p>aaa</p>';
    3. input禁用，输入123，被阻断后只剩下3
 6. `useDeferredValue`处理单个state
    1. 用在input输入，输完再出结果，中间过程被延迟了。类似于防抖
+7. `useRef`同步即时更新
+   1. 保持值改变，但是页面不渲染
+      ```tsx
+        let ref = useRef(0);
+        ref.current = ref.current + 1;
+        <p>点击次数{ref.current}！</p>
+      ```
+   2. 操作DOM
+      ```tsx
+       const inputRef = useRef(null);
+       inputRef.current.focus();
+      <input ref={inputRef}/>
+      ```
