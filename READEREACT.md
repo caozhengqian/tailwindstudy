@@ -3,7 +3,21 @@
 1. 技术对比
     1. 技术对比：https://npmtrends.com/angular-vs-react-vs-svelte-vs-vue
     2. 多少个网站使用react技术：https://trends.builtwith.com/javascript/React
-# 
+2. 模拟接口
+```tsx
+    function mock() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve({
+                    status: 200,
+                    data: "接口数据模拟成功",
+                    timestamp: Date.now()
+                });
+            }, 2000);
+        });
+    }
+```
+
 ## 一、tsconfig
 ### tsconfig.node.json是面向vite.config.ts
 ### tsconfig.app.json是面向项目
@@ -176,5 +190,17 @@ const value:string = '<p>aaa</p>';
 4. useEffectLayout在UI渲染前执行
     1. 为什么next中不生效？？？？？？？？？？
 ## hooks
-1. useSyncExternalStore 将外部数据绑定到react
+1. `useSyncExternalStore` 将外部数据绑定到react
    1. 切换网络http://localhost:3000/useSyncExternalStore1
+2. `useLayoutEffect`1页面渲染前的副作用，effect页面渲染后 http://localhost:3000/useLayoutEffect1
+3. `useState`
+   1. 数组 http://localhost:3000/useLayoutEffect1
+   2. 数组immer
+   3. obj
+4. `useImperativeHandle`暴露给ref
+5. `useTransition`处理长列表的state setList（list）
+   1. 将页面渲染放到后台，避免阻塞UI
+   2. 如果包裹的值有变化，则阻断之前的，用最新的值渲染
+   3. input禁用，输入123，被阻断后只剩下3
+6. `useDeferredValue`处理单个state
+   1. 用在input输入，输完再出结果，中间过程被延迟了。类似于防抖

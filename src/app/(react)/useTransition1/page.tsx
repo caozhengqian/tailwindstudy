@@ -2,7 +2,7 @@
 import { useState,useTransition } from 'react';
 
 // http://localhost:3000/useTransition1
-// useTransition保证input交互。将包裹的内容进入后台渲染。
+// useTransition保证input交互。将包裹的内容进入后台渲染。如果内容有变动则中断更新
 export default function UseStateObj() {
     const [inputV,setInputV] = useState<string>("");
     const [changeV,setChangeV] = useState<string>("");
