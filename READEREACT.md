@@ -225,4 +225,4 @@ const value:string = '<p>aaa</p>';
 9. `useMemo`缓存计算出来的值，在组件更新前执行，缓存长列表数据
 10. `useCallback`缓存方法
     1. 组件中的方法，每次更新都会被重新创建，使用useCallback包裹后只创建一次
-    2. 传递给子组件的方法使用useCallback包裹，
+    2. 传递给子组件的方法使用useCallback包裹，避免多次更新

@@ -34,7 +34,11 @@ body {
   };
   button{
     @apply border-2 border-gray-500
-  }
+  };
+  input{
+    @apply border-2 border-gray-500
+  };
+
 }
 @layer components{
   .card{
