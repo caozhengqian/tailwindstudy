@@ -221,3 +221,8 @@ const value:string = '<p>aaa</p>';
        inputRef.current.focus();
       <input ref={inputRef}/>
       ```
+8. `memo`包裹子组件，让子组件减少没必要的更新
+9. `useMemo`缓存计算出来的值，在组件更新前执行，缓存长列表数据
+10. `useCallback`缓存方法
+    1. 组件中的方法，每次更新都会被重新创建，使用useCallback包裹后只创建一次
+    2. 传递给子组件的方法使用useCallback包裹，

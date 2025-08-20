@@ -31,6 +31,9 @@ body {
 @layer base {
   h1{
     @apply text-2xl text-blue-500 flex-center
+  };
+  button{
+    @apply border-2 border-gray-500
   }
 }
 @layer components{
