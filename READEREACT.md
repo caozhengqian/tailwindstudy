@@ -4,19 +4,23 @@
     1. 技术对比：https://npmtrends.com/angular-vs-react-vs-svelte-vs-vue
     2. 多少个网站使用react技术：https://trends.builtwith.com/javascript/React
 2. 模拟接口
-```tsx
-    function mock() {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve({
-                    status: 200,
-                    data: "接口数据模拟成功",
-                    timestamp: Date.now()
-                });
-            }, 2000);
-        });
-    }
-```
+    ```tsx
+        function mock() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve({
+                        status: 200,
+                        data: "接口数据模拟成功",
+                        timestamp: Date.now()
+                    });
+                }, 2000);
+            });
+        }
+    ```
+3. react触发更新三个条件
+   1. state
+   2. props
+   3. usecontext
 
 ## 一、tsconfig
 ### tsconfig.node.json是面向vite.config.ts
