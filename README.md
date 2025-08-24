@@ -1,5 +1,8 @@
 
 # tailwindCss
+## 安装插件
+1. Tailwind formatter
+2.  Tailwind CSS
 ## mx margin左右  my margin上下
 ## text-[30px],bg-[#122831],before:conent-['jsm]
 ## sm (width >= 40rem /* 640px  )    max-sm(width < 40rem) 
