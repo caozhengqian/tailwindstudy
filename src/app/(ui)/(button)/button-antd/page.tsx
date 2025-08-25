@@ -5,27 +5,23 @@ import {useState} from "react";
 
 export default function page() {
 
-    function handleSubmit():void {
-
-    }
     const [loading, setLoading] = useState
     <boolean>(false);
-
-    function handleClick(index:boolean):void {
+    const handleClick:(index: boolean)=>void = (index: boolean) => {
         setLoading(index)
-    }
+    };
     return(
         <div >
-            <Button size="middle" type="primary" shape="circle" icon={<SearchOutlined/>}
-                    onClick={() => handleSubmit()}/>
             <Button
                 type="primary"
                 loading={loading}
                 onClick={() => handleClick(true)}
                 iconPosition="end"
+                icon={<SearchOutlined/>}
             >
                 Icon End
             </Button>
+
 
         </div>
     )
